@@ -1,0 +1,921 @@
+// $font-family-base: 'Mulish', sans-serif;
+// $background-color-base: #f4f7f9;
+// $sidebar-bg-color: #363740;
+// $sidebar-text-color: #A4A6B3;
+// $active-color: #dde2ff;
+// $highlight-color: #3751FF;
+// $divider-color: #DFE0EB;
+// $transparent: transparent;
+// $white: #fff;
+// $text-color: #252733;
+// $icon-color: #C5C7CD;
+
+// body {
+//     font-family: $font-family-base;
+//     background-color: $background-color-base;
+// }
+
+// .sidebar {
+//     background-color: $sidebar-bg-color;
+//     color: $white;
+//     height: 100vh;
+//     padding: 0;
+//     width: 255px;
+//     position: fixed;
+
+//     .logo-container {
+//         display: flex;
+//         align-items: center;
+//         padding: 20px;
+//         margin: 20px 0 30px;
+
+//         .ellipse {
+//             width: 32px;
+//             height: 32px;
+//             background-color: $highlight-color;
+//             border-radius: 50%;
+//             position: relative;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+
+//             .logo-letter {
+//                 color: $white;
+//                 font-size: 12px;
+//                 font-weight: 700;
+//                 width: 12px;
+//                 height: 14px;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//             }
+//         }
+
+//         .logo-text {
+//             font-size: 19px;
+//             font-weight: 700;
+//             color: $sidebar-text-color;
+//             opacity: 0.7;
+//             margin-left: 12px;
+//         }
+//     }
+
+//     ul {
+//         padding: 0;
+//         list-style: none;
+
+//         li {
+//             padding: 18px 20px;
+//             display: flex;
+//             align-items: center;
+//             cursor: pointer;
+//             font-size: 16px;
+//             font-weight: 400;
+//             line-height: 20.08px;
+//             letter-spacing: 0.2px;
+//             color: $sidebar-text-color;
+//             height: 56px;
+//             position: relative;
+
+//             i {
+//                 font-size: 16px;
+//                 width: 16px;
+//                 height: 16px;
+//                 margin-right: 10px;
+//                 color: $sidebar-text-color;
+//             }
+
+//             &::before {
+//                 content: '';
+//                 position: absolute;
+//                 left: 0;
+//                 height: 100%;
+//                 width: 3px;
+//                 background-color: $transparent;
+//                 transition: background-color 0.3s;
+//             }
+
+//             &:hover::before,
+//             &.active::before {
+//                 background-color: $active-color;
+//             }
+
+//             &::after {
+//                 content: '';
+//                 position: absolute;
+//                 left: 3px;
+//                 top: 0;
+//                 height: 100%;
+//                 width: calc(100% - 3px);
+//                 background-color: $transparent;
+//                 opacity: 0.08;
+//                 transition: background-color 0.3s, opacity 0.3s;
+//             }
+
+//             &:hover::after,
+//             &.active::after {
+//                 background-color: $sidebar-text-color;
+//                 opacity: 0.08;
+//             }
+
+//             &.active,
+//             &:hover,
+//             &.active i,
+//             &:hover i {
+//                 color: $active-color;
+//             }
+//         }
+//     }
+
+//     .divider {
+//         height: 1px;
+//         width: 255px;
+//         background-color: $divider-color;
+//         margin: 10px auto;
+//         opacity: 0.06;
+//     }
+// }
+
+// .burger-menu,
+// .close-menu {
+//     background: none;
+//     border: none;
+//     color: $white;
+//     font-size: 24px;
+//     position: absolute;
+//     top: 20px;
+//     right: 20px;
+//     display: none;
+// }
+
+// .main-content {
+//     background-color: $background-color-base;
+//     width: calc(100% - 255px);
+//     margin-left: 255px;
+//     padding: 20px;
+//     box-sizing: border-box;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .overview-container {
+//     padding: 20px;
+//     width: 100%;
+//     max-width: 1100px;
+// }
+
+// .overview-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+// }
+
+// .overview-title {
+//     top: 44px;
+//     height: 25px;
+//     color: $text-color;
+//     font-size: 24px;
+//     line-height: 30.12px;
+//     letter-spacing: 0.3px;
+// }
+
+// .header-icons {
+//     display: flex;
+//     align-items: center;
+
+//     i {
+//         font-size: 18px;
+//         margin-right: 15px;
+//         cursor: pointer;
+//     }
+
+//     #search-icon,
+//     #bell-icon {
+//         width: 16px;
+//         height: 26px;
+//         color: $icon-color;
+//         margin-top: 10px;
+//         margin-left: 20px;
+//     }
+
+//     .vertical-line {
+//         width: 1px;
+//         height: 32px;
+//         background-color: $icon-color;
+//         opacity: 0.5;
+//         margin: 0 10px;
+//     }
+// }
+
+// .user-info {
+//     display: flex;
+//     align-items: center;
+
+//     span {
+//         margin-right: 10px;
+//         font-weight: 500;
+//     }
+
+//     .user-name {
+//         font-family: $font-family-base;
+//         font-size: 14px;
+//         font-weight: 600;
+//         color: $text-color;
+//         margin-left: 20px;
+//     }
+
+//     .user-image-container {
+//         width: 44px;
+//         height: 44px;
+//         border: 2px solid $divider-color;
+//         border-radius: 50%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin-left: 10px;
+
+//         .user-img {
+//             width: 100%;
+//             height: 100%;
+//             border-radius: 50%;
+//         }
+//     }
+// }
+
+// .overview-stats {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 40px;
+//     width: 100%;
+// }
+
+// .stat-box {
+//     width: 258px;
+//     height: 134px;
+//     background-color: $white;
+//     border: 1px solid $divider-color;
+//     border-radius: 8px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+//     .stat-title,
+//     .stat-number {
+//         width: 194px;
+//         text-align: center;
+
+//         &:hover {
+//             color: $highlight-color;
+//         }
+//     }
+
+//     .stat-title {
+//         height: 24px;
+//         margin-top: 15px;
+//         font-size: 16px;
+//         color: $sidebar-text-color;
+//     }
+
+//     .stat-number {
+//         height: 50px;
+//         margin: 3px 0 10px;
+//         font-size: 36px;
+//         color: $text-color;
+//     }
+
+//     &:hover {
+//         border-color: $highlight-color;
+//     }
+// }
+
+// .large-box {
+//     width: 100%;
+//     max-width: 1105px;
+//     height: 546px;
+//     background-color: $white;
+//     border: 1px solid $divider-color;
+//     border-radius: 8px;
+//     display: flex;
+//     justify-content: space-between;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+//     margin-top: 40px;
+
+//     .chart-container {
+//         width: 70%;
+//         padding: 20px;
+
+//         h2 {
+//             font-size: 19px;
+//             font-weight: 700;
+//             line-height: 23.85px;
+//             letter-spacing: 0.4px;
+//             color: $text-color;
+//             text-align: left;
+//             margin: 10px 0 0 30px;
+//         }
+
+//         .trend-header {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//         }
+
+//         .trend-labels {
+//             display: flex;
+//             align-items: center;
+//             margin-left: auto;
+//             margin-top: 10px;
+
+//             .label-today,
+//             .label-yesterday {
+//                 font-size: 12px;
+//                 font-weight: 600;
+//                 line-height: 15.06px;
+//                 letter-spacing: 0.1px;
+//                 text-align: left;
+//                 margin-left: 10px;
+//                 color: $sidebar-text-color;
+//                 position: relative;
+
+//                 &::before {
+//                     content: "";
+//                     width: 20px;
+//                     height: 2px;
+//                     position: absolute;
+//                     top: 50%;
+//                     left: -25px;
+//                 }
+
+//                 &.label-today::before {
+//                     background-color: $highlight-color;
+//                 }
+
+//                 &.label-yesterday::before {
+//                     background-color: $icon-color;
+//                 }
+//             }
+
+//             .label-today {
+//                 margin-right: 53px;
+//             }
+//         }
+
+//         .trend-date {
+//             font-size: 12px;
+//             font-weight: 400;
+//             line-height: 16px;
+//             letter-spacing: 0.1px;
+//             color: $sidebar-text-color;
+//             text-align: left;
+//             margin: 5px 0 30px 30px;
+//         }
+
+//         .chart {
+//             width: 100%;
+//             max-width: 686px;
+//             height: 380px;
+//             border-radius: 8px;
+//             margin-left: 30px;
+//         }
+//     }
+
+//     .stats-container {
+//         width: 100%;
+//         max-width: 342px;
+//         height: 544px;
+//         background-color: $white;
+//         border-left: 1px solid $divider-color;
+//         border-radius: 0 8px 8px 0;
+//         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+//         padding: 0 20px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+
+//         .stat-item {
+//             font-size: 16px;
+//             color: $sidebar-text-color;
+//             text-align: center;
+//             padding: 20px 0;
+//             position: relative;
+//             flex: 1;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+
+//             &:not(:last-child)::after {
+//                 content: "";
+//                 position: absolute;
+//                 bottom: 0;
+//                 width: 340px;
+//                 height: 1px;
+//                 background-color: $divider-color;
+//             }
+
+//             span {
+//                 display: block;
+//                 font-size: 24px;
+//                 color: $text-color;
+//                 margin-top: 1px;
+//             }
+//         }
+//     }
+// }
+
+// .medium-box {
+//     max-width: 100%;
+//     height: auto;
+//     background-color: $white;
+//     border: 1px solid $divider-color;
+//     border-radius: 8px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+//     margin-top: 40px;
+
+//     .group-container {
+//         width: 100%;
+//         padding: 20px;
+
+//         .group-header {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+
+//             h2 {
+//                 font-size: 19px;
+//                 font-weight: 700;
+//                 line-height: 23.85px;
+//                 letter-spacing: 0.4px;
+//                 color: $text-color;
+//                 text-align: left;
+//                 margin: 10px 0 0 30px;
+//             }
+
+//             .group-title {
+//                 font-size: 12px;
+//                 font-weight: 400;
+//                 line-height: 16px;
+//                 letter-spacing: 0.1px;
+//                 color: $sidebar-text-color;
+//                 text-align: left;
+//                 margin: 5px 0 5px 30px;
+//             }
+//         }
+
+//         .view-details {
+//             font-family: $font-family-base;
+//             font-size: 14px;
+//             font-weight: 600;
+//             line-height: 20px;
+//             letter-spacing: 0.2px;
+//             color: $highlight-color;
+//             text-align: right;
+//             text-decoration: none;
+//             margin-top: 10px;
+//             margin-right: 12px;
+//         }
+
+//         .ticket-item {
+//             width: 100%;
+//             height: 58px;
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             padding: 10px 0;
+//             border-bottom: 1px solid $divider-color;
+
+//             &:last-child {
+//                 border-bottom: none;
+//             }
+
+//             span {
+//                 font-size: 14px;
+//             }
+
+//             .ticket-text {
+//                 width: 100%;
+//                 padding: 20px;
+//                 margin-left: 27px;
+//                 color: $text-color;
+//             }
+
+//             .ticket-number {
+//                 padding: 20px;
+//                 margin-right: 12px;
+//                 color: $sidebar-text-color;
+//             }
+
+//             .ticket-text1 {
+//                 width: 100%;
+//                 padding: 20px;
+//                 color: $text-color;
+//             }
+//         }
+
+//         .badge {
+//             padding: 3px 10px;
+//             border-radius: 8px;
+//             font-size: 11px;
+//             font-weight: 700;
+//             margin-right: 30px;
+//             height: 24px;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             &.add {
+//                 background-color: $sidebar-text-color;
+//                 color: $white;
+//             }
+
+//             &.urgent {
+//                 background-color: #FEC400;
+//                 color: $white;
+//             }
+
+//             &.new {
+//                 background-color: #29CC97;
+//                 color: $white;
+//             }
+
+//             &.default {
+//                 background-color: #F0F1F7;
+//                 color: $sidebar-text-color;
+//             }
+//         }
+
+//         .custom-checkbox {
+//             width: 30px;
+//             height: 22px;
+//             appearance: none;
+//             border: 2px solid $icon-color;
+//             border-radius: 50%;
+//             position: relative;
+//             cursor: pointer;
+//             display: inline-flex;
+//             align-items: center;
+//             justify-content: center;
+//             margin-left: 50px;
+
+//             &:checked {
+//                 border: none;
+//                 background-color: $highlight-color;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 border-radius: 50%;
+
+//                 &::before {
+//                     content: '✔';
+//                     color: $white;
+//                     font-size: 12px;
+//                     display: flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 1200px) {
+//     .burger-menu {
+//         display: block;
+//     }
+
+//     .sidebar {
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+
+//         ul {
+//             display: none;
+
+//             &.open {
+//                 display: block;
+//             }
+//         }
+
+//         .close-menu {
+//             display: none;
+
+//             &.open {
+//                 display: block;
+//             }
+//         }
+
+//         .burger-menu.open {
+//             display: none;
+//         }
+//     }
+
+//     .header-icons {
+//         i {
+//             margin-right: 10px;
+//         }
+
+//         #search-icon,
+//         #bell-icon {
+//             margin-left: 10px;
+//         }
+
+//         .vertical-line {
+//             margin: 0 5px;
+//         }
+//     }
+
+//     .user-name {
+//         margin-left: 10px;
+//         font-size: 12px;
+//     }
+
+//     .user-image-container {
+//         width: 36px;
+//         height: 36px;
+//     }
+
+//     .overview-stats {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .stat-box {
+//         width: 90%;
+//         margin-bottom: 20px;
+//     }
+
+//     .main-content {
+//         width: calc(100% - 255px);
+//         margin-left: 255px;
+//     }
+
+//     .large-box {
+//         flex-direction: column;
+
+//         .chart-container,
+//         .stats-container {
+//             width: 100%;
+//             max-width: 100%;
+//             height: auto;
+//             padding-right: 40px;
+//         }
+//     }
+
+//     .medium-box {
+//         width: 100%;
+//         max-width: 100%;
+//         height: auto;
+//         margin-top: 20px;
+
+//         .ticket-item,
+//         .stat-item {
+//             width: 100%;
+//         }
+
+//         .container.mt-4 .row {
+//             flex-direction: column;
+
+//             > div {
+//                 width: 100%;
+//                 margin-bottom: 20px;
+
+//                 &:last-child {
+//                     margin-bottom: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .header-icons {
+//         justify-content: space-between;
+//         width: 100%;
+//     }
+
+//     .overview-header {
+//         flex-direction: column;
+//         align-items: flex-start;
+//     }
+
+//     .overview-title {
+//         margin-bottom: 20px;
+//     }
+
+//     .user-info {
+//         flex-direction: row;
+//         align-items: center;
+//     }
+
+//     .header-icons {
+//         i {
+//             margin-right: 8px;
+//         }
+
+//         #search-icon,
+//         #bell-icon {
+//             margin-left: 8px;
+//         }
+
+//         .vertical-line {
+//             display: none;
+//         }
+//     }
+
+//     .user-name {
+//         margin-left: 5px;
+//         font-size: 10px;
+//     }
+
+//     .user-image-container {
+//         width: 32px;
+//         height: 32px;
+//     }
+
+//     .overview-stats {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .stat-box {
+//         width: 90%;
+//         margin-bottom: 20px;
+//     }
+
+//     .sidebar {
+//         width: 100%;
+//         height: auto;
+//         position: static;
+
+//         ul {
+//             &.open {
+//                 display: block;
+//             }
+//         }
+
+//         .close-menu {
+//             &.open {
+//                 display: block;
+//             }
+//         }
+
+//         .burger-menu.open {
+//             display: none;
+//         }
+//     }
+
+//     .main-content {
+//         width: 100%;
+//         margin-left: 0;
+//     }
+
+//     .large-box {
+//         flex-direction: column;
+
+//         .chart-container,
+//         .stats-container {
+//             width: 100%;
+//             max-width: 100%;
+//             height: auto;
+//             padding-right: 40px;
+//         }
+//     }
+
+//     .medium-box {
+//         width: 100%;
+//         max-width: 100%;
+//         height: auto;
+//         margin-top: 20px;
+
+//         .ticket-item,
+//         .stat-item {
+//             width: 100%;
+//         }
+
+//         .container.mt-4 .row {
+//             flex-direction: column;
+
+//             > div {
+//                 width: 100%;
+//                 margin-bottom: 20px;
+
+//                 &:last-child {
+//                     margin-bottom: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 576px) {
+//     .header-icons {
+//         justify-content: space-between;
+//         width: 100%;
+//     }
+
+//     .overview-header {
+//         flex-direction: column;
+//         align-items: flex-start;
+//     }
+
+//     .overview-title {
+//         margin-bottom: 15px;
+//     }
+
+//     .user-info {
+//         display: none;
+//     }
+
+//     .header-icons {
+//         i {
+//             margin-right: 5px;
+//         }
+
+//         #search-icon,
+//         #bell-icon {
+//             margin-left: 5px;
+//         }
+//     }
+
+//     .overview-stats {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .stat-box {
+//         width: 100%;
+//         max-width: 300px;
+//         margin-bottom: 20px;
+//     }
+
+//     .large-box {
+//         flex-direction: column;
+
+//         .chart-container,
+//         .stats-container {
+//             width: 100%;
+//             max-width: 100%;
+//             height: auto;
+//             padding-right: 40px;
+//         }
+//     }
+
+//     .medium-box {
+//         width: 100%;
+//         max-width: 100%;
+//         height: auto;
+//         margin-top: 20px;
+
+//         .ticket-item,
+//         .stat-item {
+//             width: 100%;
+//         }
+
+//         .label-today,
+//         .label-yesterday {
+//             font-size: 12px;
+//             font-weight: 600;
+//             line-height: 15.06px;
+//             letter-spacing: 0.1px;
+//             text-align: left;
+//             margin-left: auto;
+//             color: $sidebar-text-color;
+//             position: relative;
+
+//             &::before {
+//                 content: "";
+//                 width: 10px;
+//                 height: 2px;
+//                 position: absolute;
+//                 top: 50%;
+//                 left: -15px;
+//             }
+//         }
+
+//         .container.mt-4 .row {
+//             flex-direction: column;
+
+//             > div {
+//                 width: 100%;
+//                 margin-bottom: 20px;
+
+//                 &:last-child {
+//                     margin-bottom: 0;
+//                 }
+//             }
+//         }
+
+//         .custom-checkbox {
+//             width: 30px;
+//             height: 15px;
+//         }
+//     }
+// }
